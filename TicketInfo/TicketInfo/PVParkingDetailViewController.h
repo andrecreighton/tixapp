@@ -6,10 +6,10 @@
 //  Copyright © 2016 Andre. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "PVMainViewController.h"
 #import "PVParkingViolationProfile.h"
 
-@interface PVParkingDetailViewController : ViewController
+@interface PVParkingDetailViewController : PVMainViewController
 
 
 @property (nonatomic, strong) PVParkingViolationProfile *profile;

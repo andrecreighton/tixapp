@@ -6,17 +6,16 @@
 //  Copyright © 2016 Andre. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "PVMainViewController.h"
 #import "PVParkingDetailViewController.h"
 
-@interface ViewController () <UITableViewDelegate,UITableViewDataSource, UISearchBarDelegate>
+@interface PVMainViewController () <UITableViewDelegate,UITableViewDataSource, UISearchBarDelegate>
 
 
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIView *viewInFrontOfTableView;
-@property (strong, nonatomic) IBOutlet UILabel *subtitleLabel;
 @property (strong, nonatomic) NSString *stringOfDate;
 @property (strong, nonatomic) PVParkingViolationInfo *parkingInfo;
 @property (strong, nonatomic) NSMutableArray *arrayContainingPVInfo;
@@ -25,7 +24,7 @@
 
 @end
 
-@implementation ViewController
+@implementation PVMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,24 +33,51 @@
     
     self.dataStore = [PVDataStore sharedDataStore];
     self.titleLabel.text = @"Tix";
-    self.subtitleLabel.text = @"Find your tickets ! You know you have them :)";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.searchBar.delegate = self;
     self.viewInFrontOfTableView.backgroundColor = [UIColor whiteColor];
     
     
-    NSDate *date = [NSDate date];
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:@"dd/MM/YYYY"];
-    
-    
-    self.stringOfDate = [formatter stringFromDate:date];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:)
+                                                 name:@"inValidEntry"
+                                               object:nil];
     
     
 }
 
+
+-(void)receiveNotification:(NSNotification *)notified
+{
+    
+    
+    if ([[notified name] isEqualToString:@"inValidEntry"])
+    {
+        
+        
+        
+        UIAlertController *invalidLicensepPlateAlert = [UIAlertController alertControllerWithTitle:@":(" message:@"Invalid License Plate." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            self.searchBar.text = @"";
+            
+            [self.searchBar becomeFirstResponder];
+            
+        }];
+        
+        [invalidLicensepPlateAlert addAction:okAction];
+        
+        
+        [self presentViewController:invalidLicensepPlateAlert animated:YES completion:nil];
+        
+        
+    }
+    
+    
+    
+}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -67,11 +93,6 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"M.dd.yyyy"];
-//    NSString *stringOfDate = [formatter stringFromDate:[NSDate date]];
     
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
@@ -94,6 +115,7 @@
     return 80;
     
 }
+
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
 
@@ -171,9 +193,7 @@
 {
     
     
-    NSLog(@"Notification method gets ping'd");
-    
-    UIAlertController *invalidLicensepPlateAlert = [UIAlertController alertControllerWithTitle:@":(" message:@"No results found." preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *noRecordOfViolation = [UIAlertController alertControllerWithTitle:@":)" message:@"No record available." preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         self.searchBar.text = @"";
@@ -182,10 +202,10 @@
     
     }];
     
-    [invalidLicensepPlateAlert addAction:okAction];
+    [noRecordOfViolation addAction:okAction];
 
     
-    [self presentViewController:invalidLicensepPlateAlert animated:YES completion:nil];
+    [self presentViewController:noRecordOfViolation animated:YES completion:nil];
     
 }
 

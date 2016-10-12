@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E3FBF666108B39ED4FF1F041A2F25BD3234E30A2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E3FBF666108B39ED4FF1F041A2F25BD3234E30A2" : 9223372036854775807,
+    "4ACDBBBA0E68C9464ECE1A68D59C19025FD860DD" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AE171E6E-B905-4AC7-8F2D-9C96253C6D5C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E3FBF666108B39ED4FF1F041A2F25BD3234E30A2" : "tixapp\/",
+    "4ACDBBBA0E68C9464ECE1A68D59C19025FD860DD" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TicketInfo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TicketInfo\/TicketInfo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:andrecreighton\/ExhibitNYC.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4ACDBBBA0E68C9464ECE1A68D59C19025FD860DD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:andrecreighton\/tixapp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E3FBF666108B39ED4FF1F041A2F25BD3234E30A2"
+    }
+  ]
+}

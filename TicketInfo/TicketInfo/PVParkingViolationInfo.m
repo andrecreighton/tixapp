@@ -30,13 +30,16 @@
     NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
        
         
+        if(data == nil)
+        {
+            [self inValidEntryNotification];
+        }
+        else{
         
         NSArray* arrayOfViolations = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    
-        
         NSLog(@"%@", arrayOfViolations);
         blockCompletion(arrayOfViolations);
-        
+        }
         
     }];
     
@@ -46,6 +49,14 @@
 }
 
 
+-(void)inValidEntryNotification
+{
+    
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"inValidEntry"
+     object:self];
+    
+}
 
 
 

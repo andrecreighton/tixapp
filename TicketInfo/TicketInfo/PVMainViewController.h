@@ -11,7 +11,7 @@
 #import "PVDataStore.h"
 #import "PVParkingViolationProfile.h"
 
-@interface ViewController : UIViewController
+@interface PVMainViewController : UIViewController
 
 
 @end

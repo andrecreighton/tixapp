@@ -11,10 +11,6 @@
 @implementation PVParkingViolationProfile
 
 
-
-
-
-
 +(PVParkingViolationProfile *)collectFromDictionary:(NSDictionary *)dictionary
 {
     

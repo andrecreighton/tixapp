@@ -12,7 +12,7 @@
 		31140B371CC9836100AFBA6A /* PVParkingViolationProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 31140B361CC9836100AFBA6A /* PVParkingViolationProfile.m */; };
 		3140FA091CC5ACC7002CB503 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3140FA081CC5ACC7002CB503 /* main.m */; };
 		3140FA0C1CC5ACC7002CB503 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3140FA0B1CC5ACC7002CB503 /* AppDelegate.m */; };
-		3140FA0F1CC5ACC7002CB503 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3140FA0E1CC5ACC7002CB503 /* ViewController.m */; };
+		3140FA0F1CC5ACC7002CB503 /* PVMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3140FA0E1CC5ACC7002CB503 /* PVMainViewController.m */; };
 		3140FA121CC5ACC7002CB503 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3140FA101CC5ACC7002CB503 /* Main.storyboard */; };
 		3140FA141CC5ACC7002CB503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3140FA131CC5ACC7002CB503 /* Assets.xcassets */; };
 		3140FA171CC5ACC7002CB503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3140FA151CC5ACC7002CB503 /* LaunchScreen.storyboard */; };
@@ -32,8 +32,8 @@
 		3140FA081CC5ACC7002CB503 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3140FA0A1CC5ACC7002CB503 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3140FA0B1CC5ACC7002CB503 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3140FA0D1CC5ACC7002CB503 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3140FA0E1CC5ACC7002CB503 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3140FA0D1CC5ACC7002CB503 /* PVMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PVMainViewController.h; sourceTree = "<group>"; };
+		3140FA0E1CC5ACC7002CB503 /* PVMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PVMainViewController.m; sourceTree = "<group>"; };
 		3140FA111CC5ACC7002CB503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3140FA131CC5ACC7002CB503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3140FA161CC5ACC7002CB503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,8 +79,8 @@
 			children = (
 				3140FA0A1CC5ACC7002CB503 /* AppDelegate.h */,
 				3140FA0B1CC5ACC7002CB503 /* AppDelegate.m */,
-				3140FA0D1CC5ACC7002CB503 /* ViewController.h */,
-				3140FA0E1CC5ACC7002CB503 /* ViewController.m */,
+				3140FA0D1CC5ACC7002CB503 /* PVMainViewController.h */,
+				3140FA0E1CC5ACC7002CB503 /* PVMainViewController.m */,
 				31F247151CCFDDC60067E958 /* PVParkingDetailViewController.h */,
 				31F247161CCFDDC60067E958 /* PVParkingDetailViewController.m */,
 				3140FA101CC5ACC7002CB503 /* Main.storyboard */,
@@ -152,7 +152,7 @@
 		3140F9FC1CC5ACC7002CB503 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Andre;
 				TargetAttributes = {
 					3140FA031CC5ACC7002CB503 = {
@@ -247,7 +247,7 @@
 			files = (
 				31140B341CC972BE00AFBA6A /* PVDataStore.m in Sources */,
 				31F247171CCFDDC60067E958 /* PVParkingDetailViewController.m in Sources */,
-				3140FA0F1CC5ACC7002CB503 /* ViewController.m in Sources */,
+				3140FA0F1CC5ACC7002CB503 /* PVMainViewController.m in Sources */,
 				31140B371CC9836100AFBA6A /* PVParkingViolationProfile.m in Sources */,
 				3140FA0C1CC5ACC7002CB503 /* AppDelegate.m in Sources */,
 				3140FA201CC66A24002CB503 /* PVParkingViolationInfo.m in Sources */,
@@ -291,8 +291,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -335,8 +337,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
