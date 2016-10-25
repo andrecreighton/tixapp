@@ -42,6 +42,7 @@
 		3140FA1F1CC66A24002CB503 /* PVParkingViolationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVParkingViolationInfo.m; sourceTree = "<group>"; };
 		31F247151CCFDDC60067E958 /* PVParkingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVParkingDetailViewController.h; sourceTree = "<group>"; };
 		31F247161CCFDDC60067E958 /* PVParkingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVParkingDetailViewController.m; sourceTree = "<group>"; };
+		31F5B26C1DBFDD3F00D1C34E /* 82fd13e5-72ba-4039-9319-2a16564d620b.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; name = "82fd13e5-72ba-4039-9319-2a16564d620b.mobileprovision"; path = "../../../../../Library/MobileDevice/Provisioning Profiles/82fd13e5-72ba-4039-9319-2a16564d620b.mobileprovision"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 		3140FA071CC5ACC7002CB503 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				31F5B26C1DBFDD3F00D1C34E /* 82fd13e5-72ba-4039-9319-2a16564d620b.mobileprovision */,
 				3140FA081CC5ACC7002CB503 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -157,7 +159,8 @@
 				TargetAttributes = {
 					3140FA031CC5ACC7002CB503 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = N39KMN7QE9;
+						DevelopmentTeam = 329GD8M8SH;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -316,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -356,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -370,12 +373,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 329GD8M8SH;
 				INFOPLIST_FILE = TicketInfo/Info.plist;
 				"INSTALL_PATH[sdk=*]" = "$(LOCAL_APPS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.myProject.TicketInfo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrecreighton.ticketinfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -387,12 +392,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 329GD8M8SH;
 				INFOPLIST_FILE = TicketInfo/Info.plist;
 				"INSTALL_PATH[sdk=*]" = "$(LOCAL_APPS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.myProject.TicketInfo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrecreighton.ticketinfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
